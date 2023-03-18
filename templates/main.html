@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CMSC447 HW2 | George Rush</title>
+		<style type="text/css">
+			body {
+				background-color: darkslategrey;
+				font-size: 24px;
+				font-family: "Trebuchet MS", Tahoma, sans-serif;
+				color: white;
+
+				overflow: hidden;
+			}
+
+			#boxes {
+				transform: translate(40%);
+			}
+
+			#tCreate {
+				text-decoration: underline;
+			}
+			#name-entry {
+				width: 20%;
+				transform: translate(0px, -20px);
+			}
+			#id-entry {
+				width: 10%;
+				transform: translate(0px, -20px);
+			}
+			#score-entry {
+				width: 10%;
+				transform: translate(0px, -20px);
+			}
+			#submit-button {
+				width: 9.5%;
+				font-size: 20px;
+				transform: translate(0px, -20px);
+			}
+
+			#tSearch {
+				text-decoration: underline;
+			}
+			#id-search {
+				width: 10%;
+				transform: translate(0px, -20px);
+			}
+			#search-button {
+				width: 9.5%;
+				font-size: 20px;
+				transform: translate(0px, -20px);
+			}
+
+			#tDelete {
+				text-decoration: underline;
+			}
+			#id-delete {
+				width: 10%;
+				transform: translate(0px, -20px);
+			}
+			#delete-button {
+				width: 9.5%;
+				font-size: 20px;
+				transform: translate(0px, -20px);
+			}
+
+			#output {
+				color: white;
+				text-decoration: underline;
+				font-size: 28px;
+			}
+
+			input[type="text"] {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="boxes">
+			<p id="tCreate">Create new user</p>
+			<form action='/submit' method='POST' id="createform">
+				<p id="nameText">Name:</p>
+				<input type="text" id="name-entry" name="name-entry">
+				<!---->
+				<p id="idText">ID:</p>
+				<input type="text" id="id-entry" name="id-entry">
+				<!---->
+				<p id="scoreText">Points:</p>
+				<input type="text" id="score-entry" name="score-entry">
+				<!---->
+				<button id="submit-button">Submit</button>
+			</form>
+			<p id="tSearch">Search for user</p>
+			<form action='/search' method='POST' id="searchform">
+				<p id="searchText">ID:</p>
+				<input type="text" id="id-search" name="id-search">
+				<!---->
+				<button id="search-button">Search</button>
+			</form>
+			<p id="tDelete">Delete user</p>
+			<form action='/delete' method='POST' id="deleteform">
+				<p id="deleteText">ID:</p>
+				<input type="text" id="id-delete" name="id-delete">
+				<!---->
+				<button id="delete-button">Delete</button>
+			</form>
+			<p id="output"></p>
+		</div>
+	</body>
+</html>
